@@ -1,3 +1,7 @@
 # jsplayground
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/js-ncxxz4)
+## Clone git repo
+
+git clone [repo url]
+
+## Add files into commit
