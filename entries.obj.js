@@ -1,3 +1,0 @@
-function mySuperFung() {
-    return true
-}
