@@ -26,3 +26,8 @@ git checkout -b [numberOfLesson]
 ### Example
     git checkout -b "5.10"
 
+## Swith to existed branch
+git checkout [branchName]
+### Example
+git chekcout 5.11
+

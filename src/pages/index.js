@@ -2,13 +2,10 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
-
 // ===== Add here your scripts =====
 
-// import './lessons/5.8/weakMapSet'
-// import './lessons/5.10/desctructors'
-//import './lessons/5.10/tasks/medet/test'
-import './lessons/5.10/desctructors'
+import './lessons/5.11'
+
 // ===================================
 
 const inter = Inter({ subsets: ['latin'] })
@@ -34,13 +31,28 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              By <Image src="/vercel.svg" alt="Vercel Logo" className={styles.vercelLogo} width={100} height={24} priority />
+              By{' '}
+              <Image
+                src="/vercel.svg"
+                alt="Vercel Logo"
+                className={styles.vercelLogo}
+                width={100}
+                height={24}
+                priority
+              />
             </a>
           </div>
         </div>
 
         <div className={styles.center}>
-          <Image className={styles.logo} src="/next.svg" alt="Next.js Logo" width={180} height={37} priority />
+          <Image
+            className={styles.logo}
+            src="/next.svg"
+            alt="Next.js Logo"
+            width={180}
+            height={37}
+            priority
+          />
         </div>
 
         <div className={styles.grid}>
@@ -53,7 +65,9 @@ export default function Home() {
             <h2>
               Docs <span>-&gt;</span>
             </h2>
-            <p>Find in-depth information about Next.js features and&nbsp;API.</p>
+            <p>
+              Find in-depth information about Next.js features and&nbsp;API.
+            </p>
           </a>
 
           <a
@@ -65,7 +79,9 @@ export default function Home() {
             <h2>
               Learn <span>-&gt;</span>
             </h2>
-            <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
+            <p>
+              Learn about Next.js in an interactive course with&nbsp;quizzes!
+            </p>
           </a>
 
           <a
@@ -77,7 +93,9 @@ export default function Home() {
             <h2>
               Templates <span>-&gt;</span>
             </h2>
-            <p>Discover and deploy boilerplate example Next.js&nbsp;projects.</p>
+            <p>
+              Discover and deploy boilerplate example Next.js&nbsp;projects.
+            </p>
           </a>
 
           <a
@@ -89,7 +107,10 @@ export default function Home() {
             <h2>
               Deploy <span>-&gt;</span>
             </h2>
-            <p>Instantly deploy your Next.js site to a shareable URL with&nbsp;Vercel.</p>
+            <p>
+              Instantly deploy your Next.js site to a shareable URL
+              with&nbsp;Vercel.
+            </p>
           </a>
         </div>
       </main>
