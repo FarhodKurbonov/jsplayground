@@ -1,3 +1,4 @@
+import './tasks/siddiq'
 let user = {
   name: 'John',
   age: 30,
@@ -24,4 +25,4 @@ let jsonString = JSON.stringify(meetup, ['title', 'participants', 'name', 'job']
 
 // SERVER ==> PARSE
 
-console.info(JSON.parse(jsonString))
+// console.info(JSON.parse(jsonString))

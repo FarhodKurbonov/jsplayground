@@ -9,7 +9,7 @@ import './lessons/5.11/tasks/medet'
 
 import './lessons/5.11'
 import './lessons/5.11/tasks/Siddiq'
-
+import './lessons/5.12/index'
 
 // ===================================
 
