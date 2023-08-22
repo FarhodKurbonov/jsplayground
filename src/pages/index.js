@@ -4,7 +4,12 @@ import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 // ===== Add here your scripts =====
 
+
 import './lessons/5.11/tasks/medet'
+
+import './lessons/5.11'
+import './lessons/5.11/tasks/Siddiq'
+
 
 // ===================================
 
