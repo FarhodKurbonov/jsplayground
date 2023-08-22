@@ -44,7 +44,8 @@ function getLocalDay(date) {
     case 5:
       dayString = 'Friday'
       break
-      case6: dayString = 'Saturday'
+    case 6:
+      dayString = 'Saturday'
       break
     case 7:
       dayString = 'Sunday'
