@@ -27,5 +27,8 @@ let user = {
     age: 35
 };
 
-let userString = JSON.parse(JSON.stringify(user))
-console.log(userString);
+let json = JSON.stringify(user);
+console.log(json)
+
+console.log(JSON.parse(json));
+
