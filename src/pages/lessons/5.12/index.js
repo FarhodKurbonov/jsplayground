@@ -1,3 +1,5 @@
+//============================JSON==========
+
 let user = {
   name: 'Medet',
   surname: 'Berikaby',
@@ -17,3 +19,7 @@ console.log(JSON.parse(json));
 
 
 console.info(JSON.parse(jsonString))
+
+//================================================
+
+
