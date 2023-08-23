@@ -6,6 +6,7 @@ import styles from '@/styles/Home.module.css'
 
 
 import './lessons/5.11/tasks/medet'
+import './lessons/5.12/tasks/siddiq'
 
 // ===================================
 
