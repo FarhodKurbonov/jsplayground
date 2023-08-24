@@ -39,7 +39,7 @@ console.log(getLocalDay(date));
 const dateAgo = new Date(2014, 0, 2)
 
 function getDateAgo(dateAgo, days) {
-    date.setDate(dateAgo.getDay() - days)
+    dateAgo.setDate(dateAgo.getDay() - days)
     return dateAgo.getDate()
 }
 
