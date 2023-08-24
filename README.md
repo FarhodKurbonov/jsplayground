@@ -39,3 +39,7 @@ git checkout [branchName]
 ### Example
 
 git chekcout 5.11
+
+## Run project
+
+npm run dev
