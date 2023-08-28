@@ -70,7 +70,7 @@ function sumToByRecursion(n) {
     return 1
   } else {
     //Recursion case
-    debugger
+    // debugger
     return n + sumToByRecursion(n - 1)
   }
 }

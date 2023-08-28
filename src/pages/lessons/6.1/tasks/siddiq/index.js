@@ -29,15 +29,23 @@ console.log( sumFormula(100) );
 //  ====== 2 Foctarial ======
 
 function factorial(n) {
-  return (n != 1) ? n * factorial(n - 1) : 1;
+  if (n !== 1) {
+    return n * factorial(n - 1);
+  } else {
+    return 1;
+  }
 }
 
 console.log( factorial(5) ); 
 
 //  ======  3 Fibonacci numbers =====
 function fibonacci(n) {
-    return n <= 1 ? n : fib(n - 1) + fib(n - 2);
+  if (n <= 1) {
+    return n;
+  } else {
+    return fibonacci(n - 1) + fibonacci(n - 2);
   }
+}
   
   console.log( fibonacci(3) ); 
   console.log( fibonacci(7) ); 
