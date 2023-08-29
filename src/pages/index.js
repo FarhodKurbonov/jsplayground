@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 // ===== Add here your scripts =====
-import './lessons/6.1/tasks/siddiq/index'
+import './lessons/6.2/index'
 
 // ===================================
 
@@ -24,11 +24,13 @@ export default function Home() {
             Get started by editing&nbsp;
             <code className={styles.code}>src/pages/index.js</code>
           </p>
-          <div> <ol>
-            <div class ="animation">
-              <div class ="block"> </div> </div>
-              </ol>
-          
+          <div>
+            {' '}
+            <ol>
+              <div class="animation">
+                <div class="block"> </div>{' '}
+              </div>
+            </ol>
             <a
               href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
               target="_blank"
