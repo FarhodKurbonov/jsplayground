@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 // ===== Add here your scripts =====
-import './lessons/6.1/tasks/medet/index 
+import './lessons/6.1/tasks/siddiq/index'
 
 // ===================================
 
