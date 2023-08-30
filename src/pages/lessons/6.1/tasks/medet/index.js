@@ -58,9 +58,40 @@
         }
     return a
 }
-console.log(fib(5))
+console.log(fib(5));
 
  // 4) task =========Bывод односвязного списка===========
+
+ let workers = {
+  name: 'Medet',
+  salary: 300,
+  next: {
+    name: 'John',
+    job: 'Developer',
+    next: {
+      name: 'Pete',
+      age: 28,
+      next: {
+        name: 'Ann',
+        job: 'Designer',
+        salary: 350,
+        next: {
+          name: 'Mattew',
+          job: 'Taxi driver',
+          salary: 340,
+          next: null,
+        }
+      }
+    }
+  }
+ };
+ function printList(workers) {
+  console.log(workers.name);
+  if(workers.next) {
+    printList(workers.next);
+  }
+ };
+ printList(workers)
 
  // 5) task =========Вывод односвязного списка в обратном порядке=============
 
