@@ -27,8 +27,8 @@ export default function Home() {
           <div>
             {' '}
             <ol>
-              <div class="animation">
-                <div class="block"> </div>{' '}
+              <div className="animation">
+                <div className="block"> </div>{' '}
               </div>
             </ol>
             <a

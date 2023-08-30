@@ -1,3 +1,4 @@
+import './siddiq/index'
 let liver = 'liver'
 function outerFunction() {
   //Lexial Evn of outFunction
