@@ -45,22 +45,26 @@ console.log(counter2());
 
 //   ======== 4 ============
 function Counter() {
-    let count = 0;
+    this.count = 0;
 
     this.up = function () {
-        return ++count;
+        return ++this.count;
     };
 
     this.down = function () {
-        return --count;
+        return --this.count;
     };
 }
 
 let counterFunction = new Counter();
+let counterFunction2 = new Counter();
+
 console.log(counterFunction.up());
 console.log(counterFunction.up());
 console.log(counterFunction.down());
-
+console.log(counterFunction2.up());
+console.log(counterFunction2.up());
+console.log(counterFunction2.down());
 // ======== 5 =================
 let phrase = "Hello";
 
@@ -75,15 +79,15 @@ if (true) {
 // =============== 6 ===================
 // Ozgaruvchi korinmidi. Bu olik zona deyiladi 
 
-// let x = 1;
+let x = 1;
 
-// function func() {
-//   console.log(x); 
+function func() {
+    let x = 2;
+  console.log(x); 
 
-//   let x = 2;
-// }
+}
 
-// func();
+func();
 
 // ============= 7 =============
 function inBetween(a, b) {
@@ -114,3 +118,13 @@ function byField(fieldName) {
 
 
 //   ======= 9 =======
+function sum(a) {
+
+    return function(b) {
+      return a + b; 
+    };
+  
+  }
+  
+  console.log( sum(1)(2) ); // 3
+  console.log( sum(5)(-1) ); // 4
