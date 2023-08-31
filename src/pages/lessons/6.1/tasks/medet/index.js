@@ -95,7 +95,43 @@ console.log(fib(5));
 
  // 5) task =========Вывод односвязного списка в обратном порядке=============
 
- 
+ let list = {
+  name: 'Medet',
+  salary: 300,
+  job: 'QA',
+  next: {
+    name: 'John',
+    job: 'Developer',
+    next: {
+      name: 'Pete',
+      age: 28,
+      job: 'Manager',
+      salary: 280,
+      next: {
+        name: 'Ann',
+        job: 'Designer',
+        salary: 350,
+        next: {
+          name: 'Mattew',
+          job: 'Taxi driver',
+          salary: 340,
+          next: null,
+        }
+      }
+    }
+  }
+ };
+function listReverse(list){
+  if(!list.next){
+    console.log(list.name)
+    return true;
+  }else if(listReverse(list.next)){
+    console.log(list.name)
+  return true;
+}
+};
+listReverse(list);
+
 
 
 

@@ -22,7 +22,6 @@ function makeWorker() {
 
 let name = "John";
 
-// создаём функцию
 let work = makeWorker();
 
 // вызываем её
@@ -102,3 +101,106 @@ function func() {
 }
 
 func(); // Error...
+
+//==Фильтрация с помощью функции==
+
+let arr = [5, 7, 4, 3, 8 ,2, 9, 1, 11];
+
+function inArray(arr) {
+  return function (item) {
+    for (let number of arr) {
+      if (number === item) {
+        return item;
+      }
+    }
+  }
+};
+
+console.log( arr.filter( inArray([5, 3, 10] ) ) );
+
+//==Сортировать по полю==
+
+let workers = [
+  {name: 'John', surname: 'Depp', age: 29, salary: 300},
+  {name: 'Pete', surname: 'Axelson', age: 34, salary: 280},
+  {name: 'Ann', surname: 'Andrews', age: 23, salary: 350},
+  {name: 'Peter', surname: 'Antonov', age: 20, salary: 320},
+  {name: 'Newt', surname: 'MClaren', age: 25, salary: 270 },
+];
+
+
+function byField(arr) {
+  return (a, b) => a(arr) > b(arr) ? 1 : -1;
+};
+console.log( byField(workers) );
+
+//==Армия функций==
+
+
+function makeArmy() { //Lexical Environment created==>
+  let shooters = [];
+
+  
+  let i = 0;
+  while (i < 10) { // Lexical Environment created==>
+    let n = i
+
+    
+    let shooter = function() { //Lexical Environment created==>
+      console.log( n ); 
+    };
+    //========end===========
+    shooters.push(shooter); 
+    i++;
+  }
+  //======end======
+
+  
+  return shooters;
+};
+//===end===
+
+let army = makeArmy();
+army[9]();
+army[5]();
+army[3]();
+
+
+//Второе решение==========
+
+function makeArmy() {
+  let shooters = [];
+  
+  let i = 0;
+  while (i < 10) {
+  let shooter = function() {
+  return i;
+  };
+  shooters.push(shooter());
+  i++;
+  }
+  return shooters;
+  }
+  
+  let arm = makeArmy();
+  console.log(arm);
+
+  //===Use cycle for===
+
+  function makeArmy() {
+    let shooters = [];
+  
+    for(let i = 0; i < 10; i++) {
+      let shooter = function() {
+        console.log( i ); 
+      };
+      shooters.push(shooter);
+    
+    };
+    return shooters;
+  }
+  
+  let army2 = makeArmy();
+  army2[7]();
+  army2[3]();
+
