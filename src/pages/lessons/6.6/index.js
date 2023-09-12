@@ -1,74 +1,34 @@
-// ===== Usage of var in JS ======================= 
-//Define Variables
-// let counter;
-// const maker;
+//  Планирование: setTimeout и setInterval
+// 1) Task. ==Вывод каждую секунду==
 
 
-//Lexical Environment
-// function sayHi() {
-//     var name = "Pete";
-//     console.info("Hi, " + name);
+let timer = setTimeout( function printNumber(from, to) {
+    console.log( from, to);
+    timer = setTimeout(printNumber, 1000, 10, 20)
+  }, 1000, 10, 20)
+  
+// Второе решение
 
-// }
 
-//{"name": "John", "sayHi": function}, for (var i = 0; i < 10; i++) {console.log(i)}, if (true) {console.log("Hello")}
+function printNumbers(from, to) {
+    let current = from;
+    let timer = setInterval(function() {
+      console.log( current++ );
+      if(current >= to) {
+        clearInterval(timer);
+      }
+    }, 1000)
+    
+  };
+  
+  printNumbers(0, 10);
+  
+  // 2) Task. Что покажет setTimeout?
 
-{
-    let name = "John";
-    var age = 25;
+  let i = 0;
+
+setTimeout(() => alert(i), 100); // 100000000;
+
+for(let j = 0; j < 100000000; j++) {
+  i++;
 }
-
-if(true) {
-    var test = "test"
-    let test2 = "test2"
-}
-
- 
-// console.log("var", test2); 
-
-// for (let i = 0; i < 10; i++) {
-//     console.log(i)
-// }
-
-// console.log("i = ", i)
-
-// function sayHi() {
-//     phrase = "Привет";
-  
-//     console.log(phrase);
-  
-//     var phrase;
-//   }
-//   sayHi();
-
-// IIFE
-
-//   (function () {
-
-//     var message = "Hello";
-  
-//     console.log(message); // Hello
-  
-//   })();
- 
- 
-//   var message = "hi"
-
-//   {
-//     var message = "Hello";
-//     console.log(message)
-//   }
-
-//   var one = 2
-//   var one = 1
-
-
-
-
-// ========= Global Object =========
-
-// console.log("global object", this)
-// alert("global object", this)
-// window.console.log("global object", this)
-
-window.Foo = 1; 

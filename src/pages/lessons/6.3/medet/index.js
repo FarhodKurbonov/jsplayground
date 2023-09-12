@@ -183,7 +183,8 @@ function makeArmy() {
   }
   
   let arm = makeArmy();
-  console.log(arm);
+  console.log(arm[6]);
+  console.log(arm[2]);
 
   //===Use cycle for===
 
