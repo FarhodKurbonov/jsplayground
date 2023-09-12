@@ -7,21 +7,29 @@ let timer = setTimeout( function printNumber(from, to) {
     timer = setTimeout(printNumber, 1000, 10, 20)
   }, 1000, 10, 20)
   
-// Второе решение
-
+// Второе решение with setInterval()
 
 function printNumbers(from, to) {
-    let current = from;
+    let start = from;
     let timer = setInterval(function() {
-      console.log( current++ );
-      if(current >= to) {
-        clearInterval(timer);
-      }
+      console.log( ++start );
+      if(start >= to) clearInterval(timer)
     }, 1000)
-    
   };
-  
   printNumbers(0, 10);
+  
+  // Решение with setTimeout
+
+  
+function showNumbers(from, to) {
+  let start = from;
+  setTimeout( function() {
+    console.log( ++start ); 1000, 0, 10
+  }, showNumbers, 1000, 0, 10)
+};
+
+showNumbers(0, 10);
+
   
   // 2) Task. Что покажет setTimeout?
 
